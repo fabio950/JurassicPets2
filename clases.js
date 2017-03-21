@@ -1,3 +1,4 @@
+//-------------------------------- Constructores -----------------------------------
 function Carrito(fecha) {
 	this.fecha = fecha;
 	this.articulos = [];
@@ -12,6 +13,7 @@ function Articulo(id, nombre, descripcion, precio){
 	this.precio = precio;
 }
 
+//----------------------------------- Métodos --------------------------------------
 Carrito.prototype.anyadirArticulo = function(articulo) {
 	this.articulos.push(articulo);
 }
