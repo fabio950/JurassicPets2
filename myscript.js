@@ -3,6 +3,8 @@ $(document).ready(function(){
 	var dia =  fecha.getDate();
 	var mes = fecha.getMonth() + 1;
 	var anyo = fecha.getFullYear();
+	var hora = fecha.getHours();
+	var minutos = ("0" + fecha.getMinutes()).slice(-2);
 	
 	var carrito = new Carrito(dia + "/" + mes + "/" + anyo);
 	
