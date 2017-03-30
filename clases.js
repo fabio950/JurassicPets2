@@ -14,6 +14,18 @@ function Articulo(id, nombre, descripcion, precio){
 }
 
 //----------------------------------- Métodos --------------------------------------
+Carrito.prototype.getFecha = function() {
+	return this.fecha;
+}
+
+Carrito.prototype.getArticulos = function() {
+	return this.articulos.length;
+}
+
+Carrito.prototype.getTotal = function() {
+	return this.total;
+}
+
 Carrito.prototype.anyadirArticulo = function(articulo) {
 	this.articulos.push(articulo);
 }
@@ -21,9 +33,29 @@ Carrito.prototype.anyadirArticulo = function(articulo) {
 Carrito.prototype.totalCarrito = function() {
 	var total = 0;
 	
-	for(i = 0; this.articulos.length > 0; i++) {
+	for(i = 0; this.articulos.length > i; i++) {
 		total += parseFloat(this.articulos[i].precio);	
 	}
 	
 	this.total = total.toFixed(2);
+}
+
+Articulo.prototype.getId = function() {
+	return this.id;
+}
+
+Articulo.prototype.getNombre = function() {
+	return this.nombre;
+}
+
+Articulo.prototype.getDescripcion = function() {
+	return this.descripcion;
+}
+
+Articulo.prototype.getUnidad = function() {
+	return this.unidad;
+}
+
+Articulo.prototype.getPrecio = function() {
+	return this.precio;
 }
