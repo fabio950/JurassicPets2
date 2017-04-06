@@ -6,7 +6,7 @@ $(document).ready(function(){
 	var hora = fecha.getHours();
 	var minutos = ("0" + fecha.getMinutes()).slice(-2);
 	
-	var carrito = new Carrito(dia + "/" + mes + "/" + anyo);
+	var carrito = new Carrito(dia + "/" + mes + "/" + anyo + " " + hora + ":" + minutos);
 	
 	//Carga las categorías
 	$.ajax({
@@ -39,14 +39,17 @@ $('#listaCategorias').on('click', 'a', function () {
         type: "GET",
         dataType: "json",
         success: function (datos) {
-            pintarArticulos(datos);
+	        pintarArticulos(datos);
         }
     });
 });
 
 function pintarArticulos(datos) {
-    $.each(datos, function (index, value) {
-        articulo = "<div class='col-md-4'>" +
+    if(datos === 0) {
+	alert("No hay artículos");
+    } else {
+    	$.each(datos, function (index, value) {
+        	articulo = "<div class='col-md-4'>" +
 					"<div class='card hoverable'>" +
 					"<div class='card-image'>" +
 					"<img src='img/" + value.imagen + "'>" +
@@ -63,6 +66,7 @@ function pintarArticulos(datos) {
 					"</div>" +
 					"</div>";
 						
-        $("#contenedor").append(articulo);
-    });
+        	$("#contenedor").append(articulo);
+    	});
+    }
 }
