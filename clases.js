@@ -33,7 +33,7 @@ Carrito.prototype.anyadirArticulo = function(articulo) {
 Carrito.prototype.totalCarrito = function() {
 	var total = 0;
 	
-	for(i = 0; this.articulos.length > i; i++) {
+	for(i = 0; this.getArticulos > i; i++) {
 		total += parseFloat(this.articulos[i].precio);	
 	}
 	
