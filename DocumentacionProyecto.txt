@@ -1,53 +1,110 @@
-Presentaci�n
+----------------
+| Introducción |
+----------------
+
+Presentación
 -------------
 
--El presente documento, pretende presentar una idea general del funcionamiento y dise�o del
-proyecto, tanto desde el punto de vista del usuario del mismo como desde un punto de vista
-t�cnico y organizativo.
+-Jurassic Pets es un proyecto dedicado, principalmente, a la venta on-line de dinosaurios de varios tipos(carnivoros, marinos, voladores, etc...), así como todo tipo de accesorios para ellos.
 
+-El presente documento, pretende presentar una idea general del funcionamiento y diseño del proyecto, tanto desde el punto de vista del usuario del mismo como desde un punto de vista técnico y organizativo.
+
+
+Aspectos técnicos generales
+----------------------------
+
+-La aplicación se divide en dos partes, una parte cliente (Frontend) y una parte servidor (Backend), cada una de ellas con unas funciones bien definidas.
+
+
+------------------
+| Implementación |
+------------------
+
+Requerimientos del sistema
+---------------------------
+
+*Organización general
+
+La aplicación se compone principalmente de tres escenarios diferenciados, atendiendo al tipo de uso que se hace de ella y en concordancia con el nivel de seguridad correspondiente al usuario (autenticado o no), en cada momento:
+
+-Navegación libre: Cualquier usuario de Internet podrá tener acceso a una gran cantidad de contenidos de libre consulta, sin necesidad de estar registrado en el sistema.
+
+-Navegación y compra: Se requerirá estar registrado para poder tener acceso a algunas de las opciones de la aplicación, principalmente en lo que se refiere a la adquisición de productos.
+
+-Navegación, compra y administración: Un usuario administrador tendrá control total sobre todos los aspectos del proyecto.
+
+
+*Interfaz
+
+La interfaz responde principalmente a criterios estadísticos sobre el perfil tipo de usuario potencial de la aplicación, referenciado al tipo de actividad desarrollada. Se atiende en todo momento a la amigabilidad de su manejo y de sus elementos de diseño (colores, interactividad con sus componentes, correcta adaptabilidad a distintos dispositivos, etc.).
+
+
+*Seguridad
+
+Se exigirá autenticación en los siguientes casos:
+
+-Compra de productos: Usuario estándar, usuario administrador.
+
+-Compra de productos y realización de operaciones de administración: Usuario administrador.
+
+
+A continuación se detallan las operaciones permitidas (permisos), en base al nivel de seguridad del usuario autenticado:
+
+-Usuario estándar: Vistas y opciones de libre navegación, vistas y opciones de compra de productos.
+
+-Usuario administrador: Vistas y opciones de libre navegación, vistas y opciones de compra de productos, vistas y opciones de administración(Gestión de contenidos, gestión de productos, gestión de usuarios, gestión de pedidos).
 
 
 Diagramas de casos de uso
 -------------------------
 
--Registro de nuevo usuario est�ndar. Cualquier usuario de la web, est� o no registrado, puede registrar un
-nuevo usuario est�ndar en el sistema:
+-Registro de nuevo usuario estándar. Cualquier usuario de la web, esté o no registrado, puede registrar un
+nuevo usuario estándar en el sistema:
 
--Registro de nuevo usuario administrador. S�lo un usuario administrador puede registrar un nuevo usuario
+-Registro de nuevo usuario administrador. Sólo un usuario administrador puede registrar un nuevo usuario
 administrador en el sistema:
 
--Autenticaci�n de usuario en el sistema. S�lo los usuarios registrados pueden ser autenticados por el sistema:
+-Autenticación de usuario en el sistema. Sólo los usuarios registrados pueden ser autenticados por el sistema:
 
--Modificar datos de un usuario registrado. S�lo los usuarios administradores pueden modificar los datos de un
+-Modificar datos de un usuario registrado. Sólo los usuarios administradores pueden modificar los datos de un
 usuario de cualquier tipo registrado en el sistema:
 
--Eliminar usuario/s registrado/s. S�lo los usuarios administradores pueden eliminar uno o m�s usuarios de
+-Eliminar usuario/s registrado/s. Sólo los usuarios administradores pueden eliminar uno o más usuarios de
 cualquier tipo registrado/s en el sistema:
 
--A�adir una nueva categor�a. S�lo los usuarios administradores pueden a�adir nuevas categor�as al sistema:
+-Añadir una nueva categoría. Sólo los usuarios administradores pueden añadir nuevas categorías al sistema:
 
--Modificar datos de una categor�a registrada. S�lo los usuarios administradores pueden modificar los datos de una
-categor�a registrada en el sistema:
+-Modificar datos de una categoría registrada. Sólo los usuarios administradores pueden modificar los datos de una
+categoría registrada en el sistema:
 
--Eliminar categor�a/s registrada/s. S�lo los usuarios administradores pueden eliminar una o m�s categor�as
+-Eliminar categoría/s registrada/s. Sólo los usuarios administradores pueden eliminar una o más categorías
 registrada/s en el sistema:
 
--A�adir un nuevo art�culo. S�lo los usuarios administradores pueden a�adir nuevos art�culos al sistema:
+-Añadir un nuevo artículo. Sólo los usuarios administradores pueden añadir nuevos artículos al sistema:
 
--Modificar datos de un art�culo registrado. S�lo los usuarios administradores pueden modificar los datos de un
-art�culo registrado en el sistema:
+-Modificar datos de un artículo registrado. Sólo los usuarios administradores pueden modificar los datos de un
+artículo registrado en el sistema:
 
--Eliminar art�culo/s registrado/s. S�lo los usuarios administradores pueden eliminar uno o m�s art�culos
+-Eliminar artículo/s registrado/s. Sólo los usuarios administradores pueden eliminar uno o más artículos
 registrado/s en el sistema:
 
--Consultar listado de pedidos. S�lo los usuarios administradores pueden acceder al listado de pedidos:
+-Consultar listado de pedidos. Sólo los usuarios administradores pueden acceder al listado de pedidos:
 
--Desconexi�n del sistema. Cualquier usuario autenticado puede desconectarse del sistema:
+-Desconexión del sistema. Cualquier usuario autenticado puede desconectarse del sistema:
 
 
- ------------------
-|Manual de usuario |
- ------------------
+Diagrama de clases
+-------------------------
+
+"Usuario": representa a todos los usuarios registrados en el sistema.
+"Pedido": representa a los pedidos realizados por los usuarios.
+"Artículo": representa a los productos a la venta en la tienda.
+"Categoría": representa a las categorías en las que se dividen los artículos.
+
+
+---------------------
+| Manual de usuario |
+---------------------
 
 Pantalla principal
 -------------------
@@ -56,30 +113,45 @@ Pantalla principal
 divide la interfaz.
 
 
-
-Navegaci�n por los contenidos de la web
+Navegación por los contenidos de la web
 ----------------------------------------
 
 -En la pantalla principal, como contenido inicial, se muestra el encabezado con sus respectivos iconos y barra de busqueda,
-el cuerpo con las categor�as a la izquierda y un carrusel y los productos en la parte derecha, por ultimo el pie de p�gina
+el cuerpo con las categorías a la izquierda y un carrusel y los productos en la parte derecha, por ultimo el pie de página
 con diferentes links a referencias.
-
 
 
 Opciones de usuario
 --------------------
 
--Login: En la barra superior de la web, tenemos el icono de login, el cu�l nos llevar� a la p�gina de login.
+*Login
 
--Registro de nuevo usuario: Si no tenemos un usuario aun podemos registrarnos desde la p�gina de registro.
+-En la barra superior de la web, tenemos el icono de login, el cuál nos llevará a la página de login.
 
--Logout: En la barra superior de la web y al estar logueados podr�mos darle click al icono de desconexi�n, tras darle
-nos cerrar� la sesi�n y nos mantendr� en la p�gina principal de la web.
+-En la página de login, si los datos introducidos son correctos se iniciará la sesión y se nos redirigirá a la página principal, 
+si por el contrario los datos son erroneos se nos mostrará el mensaje en un alert.
+
+-En el caso de que nos hayamos autenticado correctamente, estaremos en la página principal y ya no se mostrará el icono de login, 
+en su lugar se nos motrará el de logout, también, en el caso de que seamos administradores, se nos mostrará un icono de administración.
 
 
+*Registro de nuevo usuario
 
-Funcionalidades de administraci�n
+-Si no tenemos un usuario aun, podemos registrarnos desde la página de registro.
+
+-Sólo se podrá dar de alta a usuario de tipo estándar, ya que sólo un usuario administrador logueado podrá registrar nuevos usuarios de tipo tanto administrador como estándar, tal como veremos posteriormente.
+
+-En el formulario de registro habrá que rellenar los campos como corresponde, si no se producen errores, el sistema nos mostrará un mensaje de confirmación que incluye el nombre del usuario registrado a modo de comprobación, si algun dato es erroneo se nos mostrará un mensaje en un alert.
+
+
+*Logout 
+
+-En la barra superior de la web y al estar logueados, podrémos darle click al icono de desconexión, tras darle
+nos cerrará la sesión y nos mantendrá en la página principal de la web.
+
+
+Funcionalidades de administración
 ----------------------------------
 
--Al estar logueado con un usuario con un rol de tipo admin en el encabezado de la web se nos mostrar� el icono de administraci�n, 
-al darle click se nos redirigir� a la p�gina de administraci�n.
+-Al estar logueado con un usuario con un rol de tipo admin en el encabezado de la web se nos mostrará el icono de administración, 
+al darle click se nos redirigirá a la página de administración.
