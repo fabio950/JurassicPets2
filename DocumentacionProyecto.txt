@@ -1,0 +1,85 @@
+Presentación
+-------------
+
+-El presente documento, pretende presentar una idea general del funcionamiento y diseño del
+proyecto, tanto desde el punto de vista del usuario del mismo como desde un punto de vista
+técnico y organizativo.
+
+
+
+Diagramas de casos de uso
+-------------------------
+
+-Registro de nuevo usuario estándar. Cualquier usuario de la web, esté o no registrado, puede registrar un
+nuevo usuario estándar en el sistema:
+
+-Registro de nuevo usuario administrador. Sólo un usuario administrador puede registrar un nuevo usuario
+administrador en el sistema:
+
+-Autenticación de usuario en el sistema. Sólo los usuarios registrados pueden ser autenticados por el sistema:
+
+-Modificar datos de un usuario registrado. Sólo los usuarios administradores pueden modificar los datos de un
+usuario de cualquier tipo registrado en el sistema:
+
+-Eliminar usuario/s registrado/s. Sólo los usuarios administradores pueden eliminar uno o más usuarios de
+cualquier tipo registrado/s en el sistema:
+
+-Añadir una nueva categoría. Sólo los usuarios administradores pueden añadir nuevas categorías al sistema:
+
+-Modificar datos de una categoría registrada. Sólo los usuarios administradores pueden modificar los datos de una
+categoría registrada en el sistema:
+
+-Eliminar categoría/s registrada/s. Sólo los usuarios administradores pueden eliminar una o más categorías
+registrada/s en el sistema:
+
+-Añadir un nuevo artículo. Sólo los usuarios administradores pueden añadir nuevos artículos al sistema:
+
+-Modificar datos de un artículo registrado. Sólo los usuarios administradores pueden modificar los datos de un
+artículo registrado en el sistema:
+
+-Eliminar artículo/s registrado/s. Sólo los usuarios administradores pueden eliminar uno o más artículos
+registrado/s en el sistema:
+
+-Consultar listado de pedidos. Sólo los usuarios administradores pueden acceder al listado de pedidos:
+
+-Desconexión del sistema. Cualquier usuario autenticado puede desconectarse del sistema:
+
+
+ ------------------
+|Manual de usuario |
+ ------------------
+
+Pantalla principal
+-------------------
+
+-Al acceder a la web, la primera vista que nos encontramos es la pantalla principal, donde se pueden apreciar las partes en que se
+divide la interfaz.
+
+
+
+Navegación por los contenidos de la web
+----------------------------------------
+
+-En la pantalla principal, como contenido inicial, se muestra el encabezado con sus respectivos iconos y barra de busqueda,
+el cuerpo con las categorías a la izquierda y un carrusel y los productos en la parte derecha, por ultimo el pie de página
+con diferentes links a referencias.
+
+
+
+Opciones de usuario
+--------------------
+
+-Login: En la barra superior de la web, tenemos el icono de login, el cuál nos llevará a la página de login.
+
+-Registro de nuevo usuario: Si no tenemos un usuario aun podemos registrarnos desde la página de registro.
+
+-Logout: En la barra superior de la web y al estar logueados podrémos darle click al icono de desconexión, tras darle
+nos cerrará la sesión y nos mantendrá en la página principal de la web.
+
+
+
+Funcionalidades de administración
+----------------------------------
+
+-Al estar logueado con un usuario con un rol de tipo admin en el encabezado de la web se nos mostrará el icono de administración, 
+al darle click se nos redirigirá a la página de administración.
