@@ -44,6 +44,17 @@ $('#listaCategorias').on('click', 'a', function () {
     });
 });
 
+//Finalizamos la compra e insertamos el pedido en la BD
+$("#btnFinalizarCompra").click(function() {
+	$.ajax({
+        	type: "POST",
+                data: "carrito=" + JSON.stringify(carrito),
+                url: "php/carrito.php",
+                success: function(datos){
+                }
+            });
+});
+
 function pintarArticulos(datos) {
     if(datos === 0) {
 	alert("No hay artículos");
