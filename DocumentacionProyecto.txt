@@ -139,7 +139,7 @@ en su lugar se nos motrará el de logout, también, en el caso de que seamos adm
 
 -Si no tenemos un usuario aun, podemos registrarnos desde la página de registro.
 
--Sólo se podrá dar de alta a usuario de tipo estándar, ya que sólo un usuario administrador logueado podrá registrar nuevos usuarios de tipo tanto administrador como estándar, tal como veremos posteriormente.
+-Sólo se podrá dar de alta a usuarios de tipo estándar, ya que sólo un usuario administrador logueado podrá registrar nuevos usuarios de tipo tanto administrador como estándar, tal como veremos posteriormente.
 
 -En el formulario de registro habrá que rellenar los campos como corresponde, si no se producen errores, el sistema nos mostrará un mensaje de confirmación que incluye el nombre del usuario registrado a modo de comprobación, si algun dato es erroneo se nos mostrará un mensaje en un alert.
 
@@ -155,3 +155,15 @@ Funcionalidades de administración
 
 -Al estar logueado con un usuario con un rol de tipo admin en el encabezado de la web se nos mostrará el icono de administración, 
 al darle click se nos redirigirá a la página de administración.
+
+-En la página de administración podremos hacer las funciones de administrar los usuarios, artículos, categorías y pedidos tales como listar, crear, modificar y eliminar.
+
+-Al elejir una de ellas se nos mostrará el listado en una tabla.
+
+-Si queremos crear una nueva se nos abrirá una ventana modal con un formulario en el que apareceran los campos que lo componen, los rellenamos como corresponda y aceptamos, se nos cerrará la ventana modal y automaticamente la tabla en la que salian listadas se actualizará y debería aparecer ya la que acabamos de crear.
+
+-Si lo que queremos es modificar una que ya exista la seleccionamos en el listado de la tabla y le damos a modificar, si solo le damos al modificar sin seleccionar ninguna fila se nos mostrará un alert advirtiendonos de que seleccionemos una. Si lo hacemos correctamente se nos abrirá la misma ventana modal que con la opción de crear una nueva, solo que en este caso los campos estarán rellenados con los datos de la seleccionada, modificamos los campos que queramos correctamente y al darle al botón de aceptar se nor guardará y saldrá actualizada correctamente en la tabla.
+
+-Cuando queramos eliminar seleccionamos una y pulsamos en eliminar, al hacerlo se actualizarán los datos de la tabla y ya no estará listada en ella, como en el caso de modificar si no seleccinamos nada y le damos a elimar se nos mostrará una advertencia en un alert.
+
+-En el caso de los Pedidos se nos mostrara también una tabla listando todos, pero para mostrar los detalles de un pedido tendremos que elegir el pedido en concreto y se nos mostrará otra tabla abajo con los datos detalles pedido.
