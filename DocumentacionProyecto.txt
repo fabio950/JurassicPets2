@@ -118,6 +118,41 @@ Diagrama de clases
 "Categoría": representa a las categorías en las que se dividen los artículos.
 
 
+Herramientas y tecnologías empleadas
+-------------------------------------
+
+*Herramientas de desarrollo
+
+-NetBeans: Herramienta para desarrollo de código, con funciones como autocompletado, reconocimiento de sintaxis, compilador, depurador, control de versiones, etc.
+
+-WampServer: Entorno de desarrollo web para la ejecución de aplicaciones PHP sobre servidor Apache y base de datos MySQL, que nos permite disponer de nuestro propio host local durante el proceso de desarrollo.
+
+-MySQL Workbench, phpMyAdmin, Toad for MySQL: Herramientas para diseño, consulta y manipulación de bases de datos relacionales.
+
+-Google Chrome, Mozilla Firefox: Navegadores empleados tanto para ejecución de la aplicación como para labores de depuración y testeo y trazabilidad de errores durante el proceso de desarrollo.
+
+-Git(NetBeans), GitHub: Herramienta para la gestión de versiones del código fuente de la aplicación en proceso de desarrollo, que facilita, además, la correcta coordinación de equipos de trabajo.
+
+
+*Tecnologías empleadas
+
+-JavaScript: Lenguaje de programación interpretado, utilizado del lado del cliente y que proporciona un gran dinamismo a las aplicaciones web, gracias, entre otras características, a la asincronía que ofrece en su interacción con la parte servidora de la aplicación.
+
+-HTML: Lenguaje de marcado para la elaboración de páginas web.
+
+-jQuery: Librería de JavaScript que facilita en gran medida la interacción con los documentos HTML, la manipulación del DOM, la creación de animaciones, gracias a la facilidad de manejo de eventos, etc.
+
+-jQGrid: Librería de JavaScript que permite generar tablas fácilmente con la información devuelta mediante una consulta a la base de datos. Por defecto toma sus estilos de la biblioteca jQuery UI. Permite además la manipulación de dichos datos, facilitando, por ejemplo, la implementación de operaciones CRUD.
+
+-CSS: Lenguaje empleado para dar formato a la presentación de documentos HTML, principalmente.
+
+-Materialize: Framework para diseño de interfaces web creado y diseñado por Google, Material Design es un lenguaje de diseño que combina los principios clásicos del diseño exitoso junto con la innovación y la tecnología. El objetivo de Google consiste en desarrollar un sistema de diseño que permite una experiencia de usuario unificada a través de todos sus productos en cualquier plataforma.
+
+-PHP: Lenguaje de programación que se ejecuta en el servidor. En este proyecto ha sido empleado exclusivamente para las operaciones de acceso a los datos de la capa de origen de datos, como enlace entre ésta y la parte de cliente de la aplicación.
+
+-AJAX: Técnica de desarrollo basada en la comunicación asíncrona con el servidor, esto es, el intercambio de información con el servidor que produce en segundo plano, evitando así la recarga constante y completa de la página web.
+
+
 ---------------------
 | Manual de usuario |
 ---------------------
