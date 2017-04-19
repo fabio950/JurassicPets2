@@ -93,6 +93,22 @@ registrado/s en el sistema:
 -Desconexión del sistema. Cualquier usuario autenticado puede desconectarse del sistema:
 
 
+Estructura de paquetes
+-----------------------
+
+En la carpeta raiz tenemos las diferentes páginas que usa la web(index, login, administracion) tanto PHP como su respectivo JS.
+
+-js: la carpeta "js" contiene archivos JavaScript, estos archivos actúan entre la vista y los datos.
+
+-css: la carpeta "css" contiene archivos de estilo CSS propios. 
+
+-img: la carpeta "img" contiene las imágenes que usa la web(iconos, logo, bakground, etc).
+
+-bd: la carpeta "bd" contiene los archivos PHP de acceso a datos en los cuales se hacen consultas a la BD.
+
+-lib: la carpeta "lib" contiene archivos requeridos para el correcto funcionamiento de las librerías empleadas en el proyecto(materialize, jQuery, etc).
+
+
 Diagrama de clases
 -------------------------
 
